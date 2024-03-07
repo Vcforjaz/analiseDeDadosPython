@@ -39,7 +39,7 @@
 -Display é a função de Pandas que exibe(tabela) que é o banco de dados(DB).
 -Para iniciar a importação + exibição basta clicar no play(Execute Cell).
 -No print vemos que meu código encontrou 881666 linhas e 11 colunas no DB.
--
+
 
     #3 Corrigir valores vázios ou erros de preenchimento
     display(tabela.info())
@@ -47,7 +47,7 @@
 
 -Aqui dropamos as linhas que possuem algum valor em branco, pois esses valores poderiam atrapalhar nosso aferimento.
 -dropna = drop nan, nan = Not a number (vazio).
--
+
 
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/73e9ccea-473c-4ce8-98d6-a7defe3ee1b6)
 
@@ -60,7 +60,7 @@
     display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))
 
 -Aqui temos 3 tipos de exibição, sendo a ultima a mais interessante, porém complexa em termos de código.
--
+
 
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/4417f55a-8a12-41d8-a826-f556a51f4656)
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/10111489-ca9b-4fb6-9782-c8bb3b734876)
