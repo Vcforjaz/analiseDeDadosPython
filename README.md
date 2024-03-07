@@ -24,13 +24,13 @@
 # Importando a DB:
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/7c76b27d-b753-4170-9a99-f064db4914e8)
 
-`#1 Importar DB
-import pandas as pd
-tabela = pd.read_csv("cancelamentos.csv")`
-
-`#2 Visualizar DB
-tabela = tabela.drop(columns="CustomerID")
-display(tabela)`
+    #1 Importar DB
+    import pandas as pd
+    tabela = pd.read_csv("cancelamentos.csv")`
+    
+    #2 Visualizar DB
+    tabela = tabela.drop(columns="CustomerID")
+    display(tabela)
 
 -Aqui estamos importando a biblioteca pandas e apelidando a mesma como pd, assim podendo invocar sua execução chamando seu apelido.
 -Informamos que a tabela é cancelamentos.csv, se for usar os arquivos daqui, é necessário colocar o nome correto que é cancelamentos_50k.csv
@@ -41,9 +41,9 @@ display(tabela)`
 -No print vemos que meu código encontrou 881666 linhas e 11 colunas no DB.
 -
 
-`#3 Corrigir valores vázios ou erros de preenchimento
-display(tabela.info())
-tabela = tabela.dropna()`
+    #3 Corrigir valores vázios ou erros de preenchimento
+    display(tabela.info())
+    tabela = tabela.dropna()
 
 -Aqui dropamos as linhas que possuem algum valor em branco, pois esses valores poderiam atrapalhar nosso aferimento.
 -dropna = drop nan, nan = Not a number (vazio).
@@ -51,13 +51,13 @@ tabela = tabela.dropna()`
 
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/73e9ccea-473c-4ce8-98d6-a7defe3ee1b6)
 
-`#4 Análise de cancelamentos
-#busca simples de cancelamentos x clientes atuaias:
-display(tabela["cancelou"].value_counts())
-#busca em porcentagem escrito em decimal:
-display(tabela["cancelou"].value_counts(normalize=True))
-#busca em porcentagem:
-display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))`
+    #4 Análise de cancelamentos
+    #busca simples de cancelamentos x clientes atuaias:
+    display(tabela["cancelou"].value_counts())
+    #busca em porcentagem escrito em decimal:
+    display(tabela["cancelou"].value_counts(normalize=True))
+    #busca em porcentagem:
+    display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))
 
 -Aqui temos 3 tipos de exibição, sendo a ultima a mais interessante, porém complexa em termos de código.
 -
@@ -65,14 +65,14 @@ display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))`
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/4417f55a-8a12-41d8-a826-f556a51f4656)
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/10111489-ca9b-4fb6-9782-c8bb3b734876)
 
-`#5 Análise de causas de cancelamento
-import plotly.express as px`
-
-`#criar o grafico
-for coluna in tabela.columns:
-    grafico = px.histogram(tabela, x=coluna, color="cancelou")
-    #exibir o grafico
-    grafico.show()`
+    #5 Análise de causas de cancelamento
+    import plotly.express as px
+    
+    #criar o grafico
+    for coluna in tabela.columns:
+        grafico = px.histogram(tabela, x=coluna, color="cancelou")
+        #exibir o grafico
+        grafico.show()
 
 -Foi gerado um gráfico para cada coluna existente na DB.
 -Foi utilizado um "Laço de repetição, FOR" para que enquanto houver colunas in tabela.columns (Nas colunas de cancelamentos_50k.csv) seja criado e exibido um gráfico especifico para uma a uma até que não haja mais colunas para exibir.
@@ -83,10 +83,10 @@ for coluna in tabela.columns:
 <h2>Qual o impacto caso haja solução nesses 3 motivos de cancelamentos?</h2>
 Sem entrar em detalhes das soluções, caso sejam feitas, haverá uma redução de 81.6% de taxa de cancelamento para 18.4%
 
-`#6 Qual o impacto caso haja solução dos problemas
-tabela = tabela[tabela["duracao_contrato"]!="Monthly"]
-tabela = tabela[tabela["ligacoes_callcenter"]<=4]
-tabela = tabela[tabela["dias_atraso"]<=20]
-display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))`
+    #6 Qual o impacto caso haja solução dos problemas
+    tabela = tabela[tabela["duracao_contrato"]!="Monthly"]
+    tabela = tabela[tabela["ligacoes_callcenter"]<=4]
+    tabela = tabela[tabela["dias_atraso"]<=20]
+    display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))
 
 # Tutorial elaborado por *Victor Forjaz* baseado em materiais do Lira da Hashtag programação.
