@@ -32,21 +32,21 @@
     tabela = tabela.drop(columns="CustomerID")
     display(tabela)
 
--Aqui estamos importando a biblioteca pandas e apelidando a mesma como pd, assim podendo invocar sua execução chamando seu apelido.
--Informamos que a tabela é cancelamentos.csv, se for usar os arquivos daqui, é necessário colocar o nome correto que é cancelamentos_50k.csv
--pd.read_csv é a função de pd que é o apelido da biblioteca pandas, _csv é o tipo de arquivo de banco de dados.
--Foi "dropado", excluído a coluna CustomerID, por ser irrelevante.
--Display é a função de Pandas que exibe(tabela) que é o banco de dados(DB).
--Para iniciar a importação + exibição basta clicar no play(Execute Cell).
--No print vemos que meu código encontrou 881666 linhas e 11 colunas no DB.
+<p>-Aqui estamos importando a biblioteca pandas e apelidando a mesma como pd, assim podendo invocar sua execução chamando seu apelido.</p>
+<p>-Informamos que a tabela é cancelamentos.csv, se for usar os arquivos daqui, é necessário colocar o nome correto que é cancelamentos_50k.csv</p>
+<p>-pd.read_csv é a função de pd que é o apelido da biblioteca pandas, _csv é o tipo de arquivo de banco de dados.</p>
+<p>-Foi "dropado", excluído a coluna CustomerID, por ser irrelevante.</p>
+<p>-Display é a função de Pandas que exibe(tabela) que é o banco de dados(DB).</p>
+<p>-Para iniciar a importação + exibição basta clicar no play(Execute Cell).</p>
+<p>-No print vemos que meu código encontrou 881666 linhas e 11 colunas no DB.</p>
 
 
     #3 Corrigir valores vázios ou erros de preenchimento
     display(tabela.info())
     tabela = tabela.dropna()
 
--Aqui dropamos as linhas que possuem algum valor em branco, pois esses valores poderiam atrapalhar nosso aferimento.
--dropna = drop nan, nan = Not a number (vazio).
+<p>-Aqui dropamos as linhas que possuem algum valor em branco, pois esses valores poderiam atrapalhar nosso aferimento.</p>
+<p>-dropna = drop nan, nan = Not a number (vazio).</p>
 
 
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/73e9ccea-473c-4ce8-98d6-a7defe3ee1b6)
@@ -74,10 +74,10 @@
         #exibir o grafico
         grafico.show()
 
--Foi gerado um gráfico para cada coluna existente na DB.
--Foi utilizado um "Laço de repetição, FOR" para que enquanto houver colunas in tabela.columns (Nas colunas de cancelamentos_50k.csv) seja criado e exibido um gráfico especifico para uma a uma até que não haja mais colunas para exibir.
--px é o apelido da biblioteca plotly função express, px.histogram é a função que exibe gráficos, no caso exibindo cada coluna e diferenciando com cor quem cancelou (valor 1, binário) e quem não cancelou (valor 0).
--
+<p>-Foi gerado um gráfico para cada coluna existente na DB.</p>
+<p>-Foi utilizado um "Laço de repetição, FOR" para que enquanto houver colunas in tabela.columns (Nas colunas de cancelamentos_50k.csv) seja criado e exibido um gráfico especifico para uma a uma até que não haja mais colunas para exibir.</p>
+<p>-px é o apelido da biblioteca plotly função express, px.histogram é a função que exibe gráficos, no caso exibindo cada coluna e diferenciando com cor quem cancelou (valor 1, binário) e quem não cancelou (valor 0).</p>
+
 
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/212b5e4d-5904-4bc0-8bf3-b098eb70ce08)
 <h2>Qual o impacto caso haja solução nesses 3 motivos de cancelamentos?</h2>
