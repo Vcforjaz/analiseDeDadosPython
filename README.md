@@ -32,6 +32,7 @@
     tabela = tabela.drop(columns="CustomerID")
     display(tabela)
 
+# O que foi feito no código acima?
 <p>-Aqui estamos importando a biblioteca pandas e apelidando a mesma como pd, assim podendo invocar sua execução chamando seu apelido.</p>
 <p>-Informamos que a tabela é cancelamentos.csv, se for usar os arquivos daqui, é necessário colocar o nome correto que é cancelamentos_50k.csv</p>
 <p>-pd.read_csv é a função de pd que é o apelido da biblioteca pandas, _csv é o tipo de arquivo de banco de dados.</p>
@@ -44,7 +45,8 @@
     #3 Corrigir valores vázios ou erros de preenchimento
     display(tabela.info())
     tabela = tabela.dropna()
-
+    
+# O que foi feito no código acima?
 <p>-Aqui dropamos as linhas que possuem algum valor em branco, pois esses valores poderiam atrapalhar nosso aferimento.</p>
 <p>-dropna = drop nan, nan = Not a number (vazio).</p>
 
@@ -58,7 +60,8 @@
     display(tabela["cancelou"].value_counts(normalize=True))
     #busca em porcentagem:
     display(tabela["cancelou"].value_counts(normalize=True).map("{:.1%}".format))
-
+    
+# O que foi feito no código acima?
 -Aqui temos 3 tipos de exibição, sendo a ultima a mais interessante, porém complexa em termos de código.
 
 
@@ -73,7 +76,8 @@
         grafico = px.histogram(tabela, x=coluna, color="cancelou")
         #exibir o grafico
         grafico.show()
-
+        
+# O que foi feito no código acima?
 <p>-Foi gerado um gráfico para cada coluna existente na DB.</p>
 <p>-Foi utilizado um "Laço de repetição, FOR" para que enquanto houver colunas in tabela.columns (Nas colunas de cancelamentos_50k.csv) seja criado e exibido um gráfico especifico para uma a uma até que não haja mais colunas para exibir.</p>
 <p>-px é o apelido da biblioteca plotly função express, px.histogram é a função que exibe gráficos, no caso exibindo cada coluna e diferenciando com cor quem cancelou (valor 1, binário) e quem não cancelou (valor 0).</p>
