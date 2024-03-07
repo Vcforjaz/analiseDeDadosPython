@@ -13,8 +13,9 @@
 
 > [!WARNING]
 > Bibliotecas necessárias: pandas, numpy, openxl, nbformat, ipkernel, plotly.
-> Podem ser instaladas pelo terminal do VS Code digitando: 
-<p>`pip install pandas, numpy, openxl, nbformat, ipkernel, plotly`</p>
+> Podem ser instaladas pelo terminal do VS Code digitando:
+
+`pip install pandas, numpy, openxl, nbformat, ipkernel, plotly`
 
 # Primeiro foi elaborado um passo-a-passo para o desenvolvimento do código:
 ![image](https://github.com/Vcforjaz/analiseDeDadosPython/assets/148176726/ec813a62-7b63-4faf-8a5b-94c1a17cd2a3)
