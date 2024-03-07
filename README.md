@@ -3,8 +3,8 @@
 # Como fazer uma Análise de Dados em Python :
 > [!Tip]
 > <p>Há dois arquivos upados nessa seção,.</p>
-<p>inicial.ipynb que é o arquivo aberto pelo VS Code, onde se escreve o programa e análisa os dados </p>
-<p>cancelamentos_50k.csv que é o banco de dados de uma empresa com 50 mil clientes.</p>
+<p> <n>inicial.ipynb</n> que é o arquivo aberto pelo VS Code, onde se escreve o programa e análisa os dados </p>
+<p> <n>cancelamentos_50k.csv</n> que é o banco de dados de uma empresa com 50 mil clientes.</p>
 <p></p>
 
 # Atenção !
